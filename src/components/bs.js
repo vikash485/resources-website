@@ -11,6 +11,12 @@ export const bstasks = {
         link: "https://www.spoj.com/problems/AGGRCOW/",
         id: 2,
         checked : false
+    },
+    {
+        name: "Sqrt(x)",
+        link: "https://leetcode.com/problems/sqrtx/",
+        id: 3,
+        checked: false
     }
 ]
 };

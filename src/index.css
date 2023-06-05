@@ -251,14 +251,15 @@ hr {
   justify-content: center;
   gap: .6em;
   font-size: var(--_size);
-  /* border: .2em solid hsl(var(--muted) / 0.8); */
+  border: .2em solid hsl(var(--muted) / 0.8);
   padding: .6em;
-  /* border-radius: calc(var(--_radius) * 2); */
+  border-radius: calc(var(--_radius) * 2);
 }
 
 .task-group {
   display: flex;
   align-items: center;
+  width: fit-content;
   --taskgroup-gap: .5em;
   gap: var(--taskgroup-gap);
 }
@@ -372,5 +373,32 @@ a
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 10vh;
+  padding-top: 12vh;
+  font-size: var(--_size);
+  text-align: center;
+}
+
+.home-div
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5vh;
+  flex-wrap: wrap;
+  font-size: var(--_size);
+  margin:0 auto;
+  text-align: center;
+  width:60%;
+}
+
+.credits
+{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 12vh;
+  font-size: 1.2rem;
+  margin: auto;
+  /* width:50%; */
 }

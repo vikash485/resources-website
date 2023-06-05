@@ -4,6 +4,7 @@ import LoadingBar from 'react-top-loading-bar'
 import NavBar from './components/Navbar';
 import Binarysearch from './components/Binarysearch';
 import Dynamicp from './components/Dynamicp';
+import Home from './components/Home';
 
 function App() {
   // const [tasks, setTasks] = useState(bstasks.task);
@@ -27,11 +28,11 @@ function App() {
             color='#f11946'
           />
 
-      <div className='heading-home'>
+      {/* <div className='heading-home'>
         <h1>Recommendations for DSA Topics</h1>
-        </div>
+      </div> */}
           <Routes>
-            <Route path="/" ></Route>
+            <Route path="/"  element={<Home/>}></Route>
             <Route path="/Binarysearch" element={<Binarysearch/>}></Route>
             <Route path="/Dynamicp" element={<Dynamicp/>}></Route>
           </Routes>

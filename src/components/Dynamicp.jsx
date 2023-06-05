@@ -10,9 +10,24 @@ const Dynamicp = () => {
   const [tasks, setTasks] = useLocalStorage('dp.tasks',dptasks.task);
   // console.log(tasks);
 
+  const addTask = (task) => {
+    // console.log(task);
+    setTasks(prevState => [task,...prevState])
+  }
+
+    // var ts=JSON.parse(tasks);
   for(var i=0;i<tasks.length;i++)
   {
+    tasks[i].name=dptasks.task[i].name;
     tasks[i].link=dptasks.task[i].link;
+  }
+
+  if(dptasks.task.length>tasks.length)
+  {
+    for(var i=tasks.length;i<dptasks.task.length;i++)
+    {
+      addTask(dptasks.task[i]);
+    }
   }
 
   const toggledpTask = (id) => {
@@ -21,19 +36,24 @@ const Dynamicp = () => {
   }
 
   return (
-    <ul className={styles.tasks}>
-        {
-            tasks.map(task=>(
-                <TaskItem
-                    key={task.id}
-                    link={task.link}
-                    task={task}
-                    checked={task.checked}
-                    toggleTask={toggledpTask}
-                />
-            ))
-        }
-    </ul>
+    <>
+      <div className='heading-home'>
+          <h1>Dynamic Programming Questions</h1>
+      </div>
+      <ul className={styles.tasks}>
+          {
+              tasks.map(task=>(
+                  <TaskItem
+                      key={task.id}
+                      link={task.link}
+                      task={task}
+                      checked={task.checked}
+                      toggleTask={toggledpTask}
+                  />
+              ))
+          }
+      </ul>
+    </>
   )
 }
 
