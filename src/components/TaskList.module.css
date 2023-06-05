@@ -1,0 +1,7 @@
+.tasks
+{
+  padding-top: 10vh;
+  display: grid;
+  list-style-type: none;
+  gap: 1.5rem;
+}
