@@ -2,8 +2,8 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import{BrowserRouter as Router, Routes, Route, Link}from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 import NavBar from './components/Navbar';
-import Binarysearch from './components/binarysearch';
-import Dynamicp from './components/dynamicp';
+import Binarysearch from './components/Binarysearch';
+import Dynamicp from './components/Dynamicp';
 
 function App() {
   // const [tasks, setTasks] = useState(bstasks.task);
