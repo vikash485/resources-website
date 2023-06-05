@@ -32,8 +32,8 @@ function App() {
         </div>
           <Routes>
             <Route path="/" ></Route>
-            <Route path="/binarysearch" element={<Binarysearch/>}></Route>
-            <Route path="/dynamicp" element={<Dynamicp/>}></Route>
+            <Route path="/Binarysearch" element={<Binarysearch/>}></Route>
+            <Route path="/Dynamicp" element={<Dynamicp/>}></Route>
           </Routes>
         </Router>
         </div>
