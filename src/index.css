@@ -400,5 +400,11 @@ a
   padding-top: 12vh;
   font-size: 1.2rem;
   margin: auto;
-  /* width:50%; */
+}
+
+@media screen and (max-width: 768px) {
+  .home-div
+  {
+    width: 85%;
+  }
 }
