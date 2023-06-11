@@ -17,24 +17,32 @@ const Binarysearch = () => {
   }
 
     // var ts=JSON.parse(tasks);
-  for(var i=0;i<tasks.length;i++)
-  {
-    tasks[i].name=bstasks.task[i].name;
-    tasks[i].link=bstasks.task[i].link;
-  }
-
-  if(bstasks.task.length>tasks.length)
-  {
-    for(var i=tasks.length;i<bstasks.task.length;i++)
+    function update ()
     {
-      addTask(bstasks.task[i]);
+      if(bstasks.task.length<tasks.length)
+      tasks.length=bstasks.task.length;
+      for(var i=0;i<tasks.length;i++)
+      {
+        tasks[i].name=bstasks.task[i].name;
+        tasks[i].link=bstasks.task[i].link;
+        tasks[i].id=bstasks.task[i].id;
+      }
+    
+      if(bstasks.task.length>tasks.length)
+      {
+        for(var i=tasks.length;i<bstasks.task.length;i++)
+        {
+          addTask(bstasks.task[i]);
+        }
+      }
     }
-  }
 
   const togglebsTask = (id) => {
     setTasks(prevState => prevState.map(t=> 
       (t.id===id)?{...t,checked:!t.checked}:t));
   }
+
+  update();
 
   return (
     <>

@@ -16,17 +16,24 @@ const Dynamicp = () => {
   }
 
     // var ts=JSON.parse(tasks);
-  for(var i=0;i<tasks.length;i++)
-  {
-    tasks[i].name=dptasks.task[i].name;
-    tasks[i].link=dptasks.task[i].link;
-  }
 
-  if(dptasks.task.length>tasks.length)
+  function update()
   {
-    for(var i=tasks.length;i<dptasks.task.length;i++)
+    if(dptasks.task.length<tasks.length)
+      tasks.length=dptasks.task.length;
+    for(var i=0;i<tasks.length;i++)
     {
-      addTask(dptasks.task[i]);
+      tasks[i].name=dptasks.task[i].name;
+      tasks[i].link=dptasks.task[i].link;
+      tasks[i].id=dptasks.task[i].id;
+    }
+  
+    if(dptasks.task.length>tasks.length)
+    {
+      for(var i=tasks.length;i<dptasks.task.length;i++)
+      {
+        addTask(dptasks.task[i]);
+      }
     }
   }
 
@@ -34,6 +41,8 @@ const Dynamicp = () => {
     setTasks(prevState => prevState.map(t=> 
       (t.id===id)?{...t,checked:!t.checked}:t));
   }
+
+  update();
 
   return (
     <>
