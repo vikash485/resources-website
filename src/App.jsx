@@ -5,6 +5,7 @@ import NavBar from './components/Navbar';
 import Binarysearch from './components/Binarysearch';
 import Dynamicp from './components/Dynamicp';
 import Home from './components/Home';
+import Basics from './components/Basics';
 
 function App() {
   // const [tasks, setTasks] = useState(bstasks.task);
@@ -33,6 +34,7 @@ function App() {
       </div> */}
           <Routes>
             <Route path="/"  element={<Home/>}></Route>
+            <Route path="/Basics"  element={<Basics/>}></Route>
             <Route path="/Binarysearch" element={<Binarysearch/>}></Route>
             <Route path="/Dynamicp" element={<Dynamicp/>}></Route>
           </Routes>
