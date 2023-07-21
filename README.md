@@ -1,1 +1,1 @@
-Trying to develop a DSA resource website, not completed
+A resource website that contains selected questions on various different topics, made using ReactJS.
